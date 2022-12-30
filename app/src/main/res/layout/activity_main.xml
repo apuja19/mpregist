@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/pendaftaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Form Pendaftaran"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_below="@id/pendaftaran"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:text="Nama:"
+        android:textSize="18sp" />
+    <EditText
+        android:id="@+id/isinama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/nama"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/pendaftaran" />
+
+    <TextView
+        android:id="@+id/alamat"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_below="@id/nama"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="35dp"
+        android:text="Alamat:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/isialamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nama"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/alamat"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxHeight="50dp"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/nohp"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_below="@id/alamat"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="35dp"
+        android:text="No HP:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/isinohp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alamat"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/nohp" />
+
+    <TextView
+        android:id="@+id/kelamin"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/nohp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:text="Jenis Kelamin:"
+        android:textSize="18sp" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gender"
+        android:layout_below="@id/nohp"
+        android:layout_toRightOf="@id/kelamin" >
+        <RadioButton
+            android:id="@+id/laki"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:text="Laki-laki" />
+        <RadioButton
+            android:id="@+id/perempuan"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@id/laki"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:text="Perempuan" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/lokasi"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/kelamin"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:text="Lokasi:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/kota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kelamin"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@+id/lokasi"
+        android:text="Belum ditemukan"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/koordinatbujur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kota"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/lokasi"
+        android:text="Belum ditemukan"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/koordinatlintang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/koordinatbujur"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/lokasi"
+        android:text="Belum ditemukan"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/ceklokasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kelamin"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="cek \n lokasi"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/foto"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/lokasi"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="60dp"
+        android:text="Upload foto:"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/pilihfoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/foto"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:text="Pilih" />
+
+    <ImageView
+        android:id="@+id/isifoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/koordinatlintang"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/photo" />
+
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gender"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:text="Kirim data" />
+
+</RelativeLayout>
